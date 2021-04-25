@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph" />
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/forecastSearchFragment">
+    <fragment
+        android:id="@+id/forecastSearchFragment"
+        android:name="com.hermannsterling.lowescodingassignment.view.ForecastSearchFragment"
+        android:label="ForecastSearchFragment" >
+        <action
+            android:id="@+id/action_forecastSearchFragment_to_forecastListFragment2"
+            app:destination="@id/forecastListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastDescriptionFragment"
+        android:name="com.hermannsterling.lowescodingassignment.view.ForecastDescriptionFragment"
+        android:label="ForecastDescriptionFragment" >
+        <argument
+            android:name="forecast"
+            app:argType="com.hermannsterling.lowescodingassignment.model.ForecastItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastListFragment2"
+        android:name="com.hermannsterling.lowescodingassignment.view.ForecastListFragment"
+        android:label="ForecastListFragment" >
+        <action
+            android:id="@+id/action_forecastListFragment2_to_forecastDescriptionFragment"
+            app:destination="@id/forecastDescriptionFragment" />
+    </fragment>
+</navigation>

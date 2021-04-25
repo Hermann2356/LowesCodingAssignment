@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_weather_description"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:gravity="center"
+        tools:text="Clear"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@id/tv_weather_temp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_weather_temp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        tools:text="Temp: 72"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintStart_toEndOf="@id/tv_weather_description"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
